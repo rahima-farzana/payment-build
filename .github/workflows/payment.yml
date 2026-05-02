@@ -45,7 +45,7 @@ jobs:
       # -----------------------------
       # Build and unit test
       # -----------------------------
-      - name: Setup go node
+      - name: Setup go
         uses: actions/setup-go@v5
         with:
           go-version: '1.21'
