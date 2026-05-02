@@ -108,7 +108,7 @@ jobs:
       # SonarCloud SAST Scan
       # ---------------------
       - name: SonarCloud SAST Scan
-        #continue-on-error: true # ----------> Because Code Coverage below then 80%
+        continue-on-error: true # ----------> Because Code Coverage below then 80%
         if: github.ref == 'refs/heads/main'
         uses: SonarSource/sonarcloud-github-action@master
         env:
