@@ -13,7 +13,7 @@ on:
       ECRURL:
         description: "ECR Registry URL"
         required: true
-        default: "081654307023.dkr.ecr.ap-south-1.amazonaws.com"
+        default: "967598289293.dkr.ecr.ap-south-1.amazonaws.com"
 
       APPREPO:
         description: "Docker Repo Name"
@@ -149,7 +149,7 @@ jobs:
       # ----------------------------- 
       - name: Build and Push Docker Image
         env:
-          ECR_REGISTRY: ${{ inputs.ECRURL || '081654307023.dkr.ecr.ap-south-1.amazonaws.com' }}
+          ECR_REGISTRY: ${{ inputs.ECRURL || '967598289293.dkr.ecr.ap-south-1.amazonaws.com' }}
           REPOSITORY: ${{ inputs.APPREPO || 'wezvatechpayment' }}
           IMAGE_TAG: rel${{ github.run_number }}
         run: |
